@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Montserrat:700|Pacifico');
+
+*, *:after, *:before{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+  -webkit-transition: all 100ms ease-in;
+  transition: all 100ms ease-in;
+}
+body{
+    background-size: 90%;
+    width: 100%;
+    height: 100%; 
+    margin: 70px;
+    background: #270F34; 
+    overflow: hidden; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center
+
+}
+.feliz{
+  width: 100%;
+  font-family: 'Pacifico', cursive;
+  font-size: 100px;
+  font-weight: 700;
+  color: #f48fb1;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  opacity: 0;
+  animation: ANIMEE 2s ease-in-out 7s forwards;
+}
+.ano_novo{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  padding: 200px 100px 0px 0px;
+}
+.ano_novo>span{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 155px;
+  font-weight: 700;
+  color: #e1e87a;
+  text-shadow: 2px 2px #ff0000;
+}
+span.seis{
+  position: absolute;
+  top: 51%;
+  left: 58%;
+  font-size: 155px;
+  margin-right: -200px;
+  animation: nam22 5s ease-in-out 5s forwards;
+  -webkit-box-reflect: below 0 linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,0.1));
+}
+span.sete{
+  position: absolute;
+  top: 51%;
+  font-size: 155px;
+  margin-right: -200px;
+  animation: nam23 6s ease-in-out forwards;
+}
+span.sete:before{
+  content: '';
+  width: 0px;
+  height: 6px;
+  display: block;
+  border-radius: 3px;
+  background: #7a8fe8;
+  transform: rotate(0deg);
+  transform-origin: left top;
+  position: absolute;
+  top: 55px;
+  left: 10px;
+  z-index: -1;
+  animation: anime3 1s ease-in-out 4s;
+}
+.balao{
+  width: 100px;
+  height: 100px;
+  display: block;
+  background: #e8d57a;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  margin-top: -165px;
+  right: 0%;
+  margin-right: -200px;
+  animation: anime 10s ease-in-out forwards;
+}
+.balao:before{
+  content: '';
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 10px 20px 10px;
+  border-color: transparent transparent #b19b32 transparent;
+  position: absolute;
+  left: 50%;
+  margin-left: -10px;
+  bottom: -10px;
+  z-index: -1;
+}
+.balao:after{
+  content: '';
+  width: 4px;
+  height: 100px;
+  display: block;
+  background: #fff;
+  border-radius: 0px 0px 3px 3px;
+  position: absolute;
+  left: 50%;
+  margin-left: -2px;
+  bottom: -110px;
+}
+.fogos{
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+.fogos>div{
+  border: 2px solid #fff;
+  position: absolute;
+  opacity: 0;
+  animation: anime2 1.5s ease-in-out 8s forwards;
+}
+.fogos>div.f1{
+  left: 20%;
+  top: 40%;
+}
+.fogos>div.f2{
+  left: 15%;
+  top: 70%;
+}
+.fogos>div.f3{
+  right: 20%;
+  top: 40%;
+}
+.fogos>div.f4{
+  right: 15%;
+  top: 70%;
+}
+.fogos>div span{
+  width: 6px;
+  height: 6px;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  animation: anime1 0.5s ease-in-out 9s forwards;
+}
+.fogos>div span:nth-child(1){
+  transform: rotate(0deg);
+}
+.fogos>div span:nth-child(2){
+  transform: rotate(120deg);
+}
+.fogos>div span:nth-child(3){
+  transform: rotate(240deg);
+}
+.fogos>div span:before{
+  content: '';
+  width: 2px;
+  height: 50px;
+  display: block;
+  background: #f5cc06;
+  position: absolute;
+  top: -60px;
+  left: 2px;
+}
+.fogos>div span:after{
+  content: '';
+  width: 2px;
+  height: 50px;
+  display: block;
+  background: #f5cc06;
+  position: absolute;
+  bottom: -60px;
+  left: 2px;
+}
+.fogos>div span i:before{
+  content: '';
+  width: 3px;
+  height: 3px;
+  display: block;
+  border-radius: 50%;
+  background: #fff;
+  position: absolute;
+  top: -15px;
+  left: 10px;
+}
+.fogos>div span i:after{
+  content: '';
+  width: 3px;
+  height: 3px;
+  display: block;
+  border-radius: 50%;
+  background: #fff;
+  position: absolute;
+  top: -15px;
+  right: 10px;
+}
+a.author{
+  font-family: sans-serif;
+  font-weight: bold;
+  font-style: none;
+  font-size: 20px;
+  text-decoration: none;
+  color: #ffffff;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  background-color: #f5f5f5;
+  background-image: linear-gradient(to bottom, #fff9, transparent 50%, transparent 90%, #ffffff99),
+  repeating-linear-gradient(60deg, #fdfdfd55 0, #ffffff55 10px, transparent 10px, transparent 20px),
+  linear-gradient(to bottom, #f8f8f8, #ffffff);
+  line-height: 42px;
+  text-shadow: 0 -1px 0 #EFB7DE;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 10px 0 #0005,
+  0 5px 0 #f6f6f6,
+  0 4px 0 7px #fff,
+  0 0 20px 10px #f8084c;
+  transition: .5s;
+
+}
+a.author:hover {
+  font-style: italic;
+  filter: contrast(200%);
+  transform: translateY(-15px);
+}
+@keyframes nam23 {
+  0% {
+    right: 0%;
+  }
+  66.6666% {
+    right: 50%;
+    margin-right: -300px;
+  }
+  90% {
+    right: 50%;
+    margin-right: -300px;
+  }
+  100% {
+    right: 50%;
+  }
+}
+@keyframes anime {
+  0% {
+    right: 0%;
+  }
+  40% {
+    right: 50%;
+    margin-right: -300px;
+  }
+  50% {
+    right: 50%;
+    margin-right: -200px;
+    top: 50%;
+  }
+  100% {
+    top: -100%;
+    right: 50%;
+  }
+}
+@keyframes anime3 {
+  0% {
+    transform: rotate(-30deg);
+    width: 40px;
+  }
+  100% {
+    transform: rotate(-150deg);
+    width: 70px;
+  }
+}
+@keyframes nam22 {
+  0% {
+    top: 50%;
+  }
+  100% {
+    top: -100%;
+  }
+}
+@keyframes ANIMEE {
+  0% {
+    margin-top: 0px;
+    opacity: 0;
+  }
+  100% {
+    margin-top: -200px;;
+    opacity: 1;
+  }
+}
+@keyframes anime2 {
+  0% {
+    margin-top: 100%;
+    opacity: 0;
+    width: 2px;
+    height: 30px;
+    display: block;
+    border-radius: 50%;
+  }
+  75% {
+    margin-top: 0%;
+    opacity: 1;
+    width: 2px;
+    height: 30px;
+    display: block;
+    border-radius: 50%;
+  }
+  80%{
+    margin-top: 0px;
+    margin-left: 0px;
+    opacity: 1;
+    width: 10px;
+    height: 10px;
+    display: block;
+    border-radius: 50%;
+    transform: scale(0.2);
+  }
+  100%{
+    opacity: 1;
+    width: 10px;
+    height: 10px;
+    display: block;
+    border-radius: 50%;
+    transform: scale(1);
+  }
+}
+@keyframes anime1 {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+    </style>
+    <div class="feliz">Happy new year</div>
+<div class="ano_novo">
+  <span>202</span>
+  <span class="seis">2</span>
+  <span class="sete">3</span>
+  <div class="balao"></div>
+</div>
+<div class="fogos">
+  <div class="f1">
+    <span><i></i></span>
+    <span><i></i></span>
+    <span><i></i></span>
+  </div>
+  <div class="f2">
+    <span><i></i></span>
+    <span><i></i></span>
+    <span><i></i></span>
+  </div>
+  <div class="f3">
+    <span><i></i></span>
+    <span><i></i></span>
+    <span><i></i></span>
+  </div>
+  <div class="f4">
+    <span><i></i></span>
+    <span><i></i></span>
+    <span><i></i></span>
+  </div>
+</div>
+<button type="button" class="btn btn" href="index.html">
+<a href="index.html" class="author">XEM PHÁO HOA</a>
+</button>
+
+<style>
+  css-doodle {
+    --color: @p(#51eaea, #fffde1, #ff9d76, #FB3569);
+    --rule: (
+      :doodle {
+        @grid: 30x1 / 18vmin;
+        --deg: @p(-180deg, 180deg);
+      }
+      :container {
+        perspective: 30vmin;
+      }
+      :after, :before {
+        content: '';
+        background: var(--color); 
+        @place-cell: @r(100%) @r(100%);
+        @size: @r(6px);
+        @shape: heart;
+      }
+    
+      @place-cell: center;
+      @size: 100%;
+    
+      box-shadow: @m2(0 0 50px var(--color));
+      background: @m100(
+        radial-gradient(var(--color) 50%, transparent 0) 
+        @r(-20%, 120%) @r(-20%, 100%) / 1px 1px
+        no-repeat
+      );
+    
+      will-change: transform, opacity;
+      animation: scale-up 12s linear infinite;
+      animation-delay: calc(-12s / @size() * @i());
+
+      @keyframes scale-up {
+        0%, 95.01%, 100% {
+          transform: translateZ(0) rotate(0);
+          opacity: 0;
+        }
+        10% { 
+          opacity: 1; 
+        }
+        95% {
+          transform: 
+            translateZ(35vmin) rotateZ(@var(--deg));
+        }
+      }
+    )
+  }
+</style>
+<css-doodle use="var(--rule)"></css-doodle>
+  <script src="main.js"></script>
+  <button type="button" class="btn btn" href="index.html">
+    <a href="index.html" class="author">XEM PHÁO HOA</a>
+    </button>
+</body>
+</html>
